@@ -134,6 +134,18 @@ a{color:inherit}
     padding-top:0;
   }
 }
+.folder-grid--single-line .folder-name,
+.folder-grid--single-line .folder-meta,
+.folder-grid--single-line .folder-arrow{
+  display:block;
+  max-width:100%;
+  white-space:nowrap !important;
+  overflow:hidden !important;
+  text-overflow:ellipsis !important;
+}
+.folder-grid--single-line .folder-body{
+  min-width:0;
+}
 /* Cartão no estilo “serviços”: capa + corpo com borda e hover (article + links separados) */
 .folder-card{
   display:flex;
@@ -202,6 +214,11 @@ a{color:inherit}
   background-size:contain;
   background-repeat:no-repeat;
   background-position:center;
+  background-color:transparent;
+  filter:none;
+}
+.folder-cover.folder-cover--contain-logo::after{
+  display:none;
 }
 .folder-card:hover .folder-cover{transform:scale(1.04)}
 .folder-card-foot{
