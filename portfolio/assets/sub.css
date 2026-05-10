@@ -146,6 +146,23 @@ a{color:inherit}
 .folder-grid--single-line .folder-body{
   min-width:0;
 }
+/* Página Sites: fundo cinza nas logos (contraste com marcas claras/brancas) + P&B */
+.folder-grid--sites-logos .folder-cover.folder-cover--contain-logo{
+  background-color:#ebebeb;
+  filter:grayscale(1);
+}
+/* Idogy: leve ampliação em relação ao contain (evita crop como em 185%) */
+.folder-grid--sites-logos .folder-cover.folder-cover--contain-logo.folder-cover--sites-logo-lg{
+  background-size:118% auto;
+  background-position:center center;
+}
+.folder-cover-hit--static{
+  cursor:default;
+}
+.folder-arrow.folder-arrow--muted{
+  cursor:default;
+  opacity:0.65;
+}
 /* Cartão no estilo “serviços”: capa + corpo com borda e hover (article + links separados) */
 .folder-card{
   display:flex;
