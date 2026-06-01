@@ -348,6 +348,57 @@ a.folder-arrow:focus-visible{
   font-size:14px;
   text-align:center;
 }
+.pf-callout{
+  max-width:42rem;
+  padding:32px 28px 36px;
+  background:var(--white);
+  border:1px solid var(--light-line);
+  border-radius:10px;
+}
+.pf-callout-text{
+  font-family:var(--sans);
+  font-size:15px;
+  font-weight:300;
+  line-height:1.85;
+  color:var(--graphite);
+  margin-bottom:24px;
+}
+.pf-callout-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 20px;
+  align-items:center;
+}
+.pf-callout-btn{
+  display:inline-block;
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:400;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--white);
+  background:var(--black);
+  padding:14px 22px;
+  border-radius:100px;
+  transition:opacity 0.2s,transform 0.2s;
+}
+.pf-callout-btn:hover{
+  opacity:0.88;
+  transform:translateY(-1px);
+}
+.pf-callout-link{
+  font-family:var(--sans);
+  font-size:13px;
+  font-weight:300;
+  color:var(--mid);
+  text-decoration:none;
+  border-bottom:1px solid var(--light-line);
+}
+.pf-callout-link:hover{
+  color:var(--graphite);
+  border-bottom-color:var(--graphite);
+}
 /* Página intermédia: cliente com vários ficheiros .txt (lista de serviços) */
 .pf-servicos-hero{
   aspect-ratio:21/9;
