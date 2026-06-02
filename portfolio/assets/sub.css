@@ -228,7 +228,13 @@ a{color:inherit}
 }
 /* Mesmo tamanho do card, imagem deslocada para cima */
 .folder-cover.folder-cover--position-top{
-  background-position:center top;
+  background-position:center 8%;
+}
+.folder-cover.folder-cover--position-top-gfi{
+  background-position:center 18%;
+}
+.folder-cover.folder-cover--position-top-clube{
+  background-position:center 22%;
 }
 /* Logos com arte já em “caixa”: evita crop assimétrico do cover */
 .folder-cover.folder-cover--contain-logo{
