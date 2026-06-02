@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Propostas comerciais — links privados, não indexar
+Disallow: /propostas-comerciais/
