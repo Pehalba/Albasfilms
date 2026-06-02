@@ -226,6 +226,10 @@ a{color:inherit}
   aspect-ratio:4/5;
   background-position:center top;
 }
+/* Mesmo tamanho do card, imagem deslocada para cima */
+.folder-cover.folder-cover--position-top{
+  background-position:center top;
+}
 /* Logos com arte já em “caixa”: evita crop assimétrico do cover */
 .folder-cover.folder-cover--contain-logo{
   background-size:contain;
