@@ -4,3 +4,4 @@ Allow: /
 # Propostas comerciais — links privados, não indexar
 Disallow: /propostas-comerciais/
 Disallow: /propostacomercial/
+Disallow: /catalogo-albas/
