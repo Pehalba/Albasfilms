@@ -5,3 +5,5 @@ Allow: /
 Disallow: /propostas-comerciais/
 Disallow: /propostacomercial/
 Disallow: /catalogo-albas/
+Disallow: /catalogo-eventos/
+Disallow: /catalogo-pre-wedding/
