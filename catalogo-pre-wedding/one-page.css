@@ -222,12 +222,10 @@ body.one-page-body {
   margin-top: 2px;
 }
 
-.pkg-deliverables-line {
+.pkg-list--deliverables {
   font-size: 11px;
-  line-height: 1.45;
-  color: var(--graphite);
-  margin: 0 auto 24px;
-  max-width: 320px;
+  line-height: 1.5;
+  margin-bottom: 24px;
 }
 
 .pkg-price {
@@ -418,7 +416,7 @@ body.one-page-body {
     max-width: none;
   }
 
-  .pkg-deliverables-line {
+  .pkg-list--deliverables {
     font-size: clamp(8px, 2.6vw, 10px);
     line-height: 1.5;
     max-width: none;
@@ -491,7 +489,7 @@ body.one-page-body {
   }
 
   .pkg-list,
-  .pkg-deliverables-line,
+  .pkg-list--deliverables,
   .addon-stack-list li,
   .addon-stack-note {
     font-size: 8px;
