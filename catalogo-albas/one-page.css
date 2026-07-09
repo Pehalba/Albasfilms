@@ -161,7 +161,6 @@ body.one-page-body {
   font-size: clamp(28px, 5vw, 36px);
   font-weight: 400;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
   text-align: center;
   padding: 28px 16px 20px;
   margin: 0;
