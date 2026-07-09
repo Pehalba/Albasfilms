@@ -28,6 +28,7 @@ body.one-page-body {
   color: var(--black);
   background: radial-gradient(circle at top, #f7f5f2 0%, var(--bg) 46%, #e5e1dc 100%);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 .deck-shell {
@@ -146,44 +147,105 @@ body.one-page-body {
   opacity: 0.9;
 }
 
-/* —— Duas colunas —— */
+/* —— Duas colunas sincronizadas —— */
 .one-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: auto repeat(5, minmax(52px, 1fr));
+  align-items: stretch;
   min-height: 0;
 }
 
-.pkg-col {
-  padding: 28px 24px 32px;
-  text-align: center;
-}
-
-.pkg-col--main {
-  border-right: 1px solid var(--light-line);
-  display: flex;
-  flex-direction: column;
-}
-
-.pkg-col--addons {
-  background: var(--bg-light);
-}
-
-.pkg-col-title {
+.split-title {
   font-family: var(--serif);
   font-size: clamp(28px, 5vw, 36px);
   font-weight: 400;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-bottom: 22px;
+  text-align: center;
+  padding: 28px 16px 20px;
+  margin: 0;
+}
+
+.split-title--main {
+  grid-column: 1;
+  grid-row: 1;
+  border-right: 1px solid var(--light-line);
+}
+
+.split-title--addons {
+  grid-column: 2;
+  grid-row: 1;
+  background: var(--bg-light);
+}
+
+.sync-main {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px 16px;
+  border-right: 1px solid var(--light-line);
+  border-bottom: 1px solid var(--light-line);
+}
+
+.sync-main--features {
+  grid-row: 2 / 4;
+}
+
+.sync-row-2 { grid-row: 2; }
+.sync-row-3 { grid-row: 3; }
+.sync-row-4 { grid-row: 4; }
+.sync-row-5 { grid-row: 5; }
+.sync-row-6 { grid-row: 6; }
+
+.sync-main--videos-label {
+  border-bottom: none;
+}
+
+.sync-main--deliverables {
+  border-bottom: none;
+}
+
+.sync-row-6.sync-addon,
+.sync-main--price {
+  border-bottom: none;
+}
+
+.sync-addon {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2px;
+  padding: 12px 10px;
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--light-line);
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--graphite);
+}
+
+.sync-addon .addon-name {
+  display: block;
+}
+
+.sync-addon .addon-price {
+  font-weight: 500;
+  color: var(--black);
+  font-variant-numeric: tabular-nums;
 }
 
 .pkg-subtitle {
   font-family: var(--serif);
-  font-size: 20px;
-  font-weight: 400;
+  font-size: clamp(14px, 3.8vw, 22px);
+  font-weight: 600;
   font-style: italic;
-  margin: 20px 0 14px;
-  color: var(--graphite);
+  margin: 0;
+  color: var(--black);
 }
 
 .pkg-list {
@@ -197,17 +259,28 @@ body.one-page-body {
   margin-top: 2px;
 }
 
-.pkg-price {
-  margin-top: auto;
-  padding-top: 24px;
+.pkg-deliverables-line {
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--graphite);
+  margin: 0;
 }
 
+.pkg-price {
+  margin: 0;
+  padding: 0;
+}
+
+.pkg-price-label,
 .pkg-price-strike {
   display: block;
   font-size: 11px;
   color: var(--mid);
-  text-decoration: line-through;
   margin-bottom: 4px;
+}
+
+.pkg-price-strike {
+  text-decoration: line-through;
 }
 
 .pkg-price-value {
@@ -219,51 +292,6 @@ body.one-page-body {
   background: var(--black);
   padding: 12px 28px;
   letter-spacing: 0.02em;
-}
-
-.addon-list {
-  list-style: none;
-  text-align: left;
-  max-width: 280px;
-  margin: 0 auto;
-}
-
-.addon-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--light-line);
-  font-size: 11px;
-  line-height: 1.45;
-  color: var(--graphite);
-}
-
-.addon-list li:last-child {
-  border-bottom: none;
-}
-
-.addon-name {
-  flex: 1;
-  text-align: left;
-}
-
-.addon-price {
-  flex-shrink: 0;
-  font-weight: 500;
-  color: var(--black);
-  font-variant-numeric: tabular-nums;
-}
-
-.addon-note {
-  margin-top: 20px;
-  font-size: 9px;
-  line-height: 1.6;
-  color: var(--mid);
-  max-width: 280px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .one-disclaimer {
@@ -326,21 +354,125 @@ body.one-page-body {
 }
 
 @media (max-width: 640px) {
-  .one-split {
-    grid-template-columns: 1fr;
+  body.one-page-body {
+    background: var(--white);
   }
 
-  .pkg-col--main {
+  body.one-page-body .deck-shell {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .deck-toolbar {
+    margin-bottom: 0;
+    padding: 10px 14px;
+    border-radius: 0;
+    border-left: none;
     border-right: none;
-    border-bottom: 1px solid var(--light-line);
+    border-top: none;
   }
 
-  .pkg-col {
-    padding: 24px 20px 28px;
+  .page.single-page {
+    width: 100%;
+    min-height: 100dvh;
+    min-height: 100svh;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .one-split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto repeat(5, minmax(44px, 1fr));
+    flex: 1;
+  }
+
+  .split-title {
+    font-size: clamp(15px, 4.2vw, 22px);
+    letter-spacing: 0.02em;
+    padding: 14px 8px 12px;
+    line-height: 1.15;
+  }
+
+  .sync-main,
+  .sync-addon {
+    padding: 8px 6px;
+  }
+
+  .pkg-subtitle {
+    font-size: clamp(13px, 3.8vw, 17px);
+    font-weight: 600;
+  }
+
+  .pkg-list {
+    font-size: clamp(8px, 2.6vw, 10px);
+    line-height: 1.5;
+  }
+
+  .pkg-deliverables-line {
+    font-size: clamp(7px, 2.3vw, 9px);
+    line-height: 1.35;
+  }
+
+  .pkg-price-value {
+    font-size: clamp(14px, 4vw, 18px);
+    padding: 8px 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sync-addon {
+    font-size: clamp(8px, 2.5vw, 10px);
+    gap: 2px;
+  }
+
+  .sync-addon .addon-price {
+    font-size: clamp(9px, 2.7vw, 11px);
+  }
+
+  .one-cta {
+    margin-top: auto;
   }
 
   .one-cover {
-    min-height: 180px;
+    min-height: clamp(160px, 28vh, 220px);
+  }
+
+  .one-cover-text {
+    padding: 40px 16px 24px;
+  }
+
+  .one-cover-title {
+    font-size: clamp(36px, 11vw, 48px);
+  }
+
+  .cta-btn {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .split-title {
+    font-size: 14px;
+  }
+
+  .sync-main,
+  .sync-addon {
+    padding: 6px 4px;
+  }
+
+  .pkg-list,
+  .sync-addon,
+  .pkg-deliverables-line {
+    font-size: 8px;
   }
 }
 
