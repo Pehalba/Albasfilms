@@ -1,0 +1,480 @@
+/* Proposta — Colônia de Férias Alphaville */
+:root {
+  --bg: #eceae8;
+  --bg-light: #f2f0ee;
+  --white: #faf9f7;
+  --black: #111110;
+  --graphite: #3a3a38;
+  --mid: #7a7a78;
+  --light-line: #d8d5d2;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Outfit", system-ui, sans-serif;
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --shadow-deck: 0 24px 48px rgba(17, 17, 16, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.one-page-body {
+  font-family: var(--sans);
+  font-weight: 300;
+  color: var(--black);
+  background: radial-gradient(circle at top, #f7f5f2 0%, var(--bg) 46%, #e5e1dc 100%);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.deck-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px 16px 32px;
+}
+
+.deck-toolbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  background: rgba(250, 249, 247, 0.88);
+  border: 1px solid var(--light-line);
+  border-radius: var(--radius-md);
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.brand-mark img {
+  height: 32px;
+  width: auto;
+}
+
+.brand-text {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+.page.single-page {
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--light-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-deck);
+  overflow: hidden;
+}
+
+/* —— Capa —— */
+.one-cover {
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--light-line);
+}
+
+.one-cover-photo {
+  position: absolute;
+  inset: 0;
+}
+
+.one-cover-photo--duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  overflow: hidden;
+}
+
+.one-cover-photo--duo .one-cover-duo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+.one-cover-duo--pedro {
+  object-position: center 10%;
+}
+
+.one-cover-duo--carol {
+  object-position: center 22%;
+}
+
+.one-cover-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(17, 17, 16, 0.72) 0%, rgba(17, 17, 16, 0.2) 55%, transparent 100%);
+  pointer-events: none;
+}
+
+.one-cover-text {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  padding: 48px 24px 28px;
+  color: var(--white);
+}
+
+.one-cover-eyebrow {
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.one-cover-title {
+  font-family: var(--serif);
+  font-size: clamp(42px, 10vw, 56px);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.one-cover-year {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 10px;
+}
+
+.one-cover-brand {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* —— Layout empilhado —— */
+.one-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack-block {
+  padding: 28px 24px 32px;
+  text-align: center;
+  border-bottom: 1px solid var(--light-line);
+}
+
+.stack-block:last-of-type {
+  border-bottom: none;
+}
+
+.stack-block--addons {
+  background: var(--bg-light);
+}
+
+.stack-block--complete {
+  background: var(--white);
+}
+
+.stack-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 0 0 8px;
+}
+
+.stack-lead {
+  font-family: var(--serif);
+  font-size: clamp(16px, 3.5vw, 20px);
+  font-style: italic;
+  color: var(--graphite);
+  margin: 0 0 18px;
+}
+
+.stack-desc {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--graphite);
+  max-width: 420px;
+  margin: 0 auto 18px;
+}
+
+.pkg-subtitle {
+  font-family: var(--serif);
+  font-size: clamp(14px, 3.8vw, 20px);
+  font-weight: 600;
+  font-style: italic;
+  margin: 0 0 12px;
+  color: var(--black);
+}
+
+.pkg-list {
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.85;
+  color: var(--graphite);
+  max-width: 420px;
+  margin: 0 auto 24px;
+  text-align: left;
+}
+
+.pkg-list li {
+  position: relative;
+  padding-left: 1.1em;
+}
+
+.pkg-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--mid);
+}
+
+.pkg-list li + li {
+  margin-top: 4px;
+}
+
+.pkg-list--checks li::before {
+  content: "✓";
+  font-size: 10px;
+  color: var(--black);
+}
+
+.pkg-price {
+  margin: 0;
+  padding: 0;
+}
+
+.pkg-price-label {
+  display: block;
+  font-size: 11px;
+  color: var(--mid);
+  margin-bottom: 6px;
+}
+
+.pkg-price-strike {
+  display: block;
+  font-size: 13px;
+  color: var(--mid);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.pkg-price-value {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: clamp(22px, 4vw, 28px);
+  font-weight: 500;
+  color: var(--white);
+  background: var(--black);
+  padding: 12px 28px;
+  letter-spacing: 0.02em;
+}
+
+.pkg-price-value--light {
+  background: var(--graphite);
+}
+
+.stack-saving {
+  margin-top: 14px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--graphite);
+}
+
+.one-cta {
+  text-align: center;
+  padding: 20px 24px 24px;
+  border-top: 1px solid var(--light-line);
+}
+
+.one-cta-text {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--graphite);
+  margin-bottom: 14px;
+}
+
+.cta-btn {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--black);
+  padding: 14px 32px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: var(--graphite);
+}
+
+.one-foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 20px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mid);
+  border-top: 1px solid var(--light-line);
+  background: var(--bg-light);
+}
+
+.one-foot span + span::before {
+  content: "·";
+  margin-right: 16px;
+}
+
+@media (max-width: 640px) {
+  body.one-page-body {
+    background: var(--white);
+  }
+
+  body.one-page-body .deck-shell {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .deck-toolbar {
+    margin-bottom: 0;
+    padding: 10px 14px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+
+  .page.single-page {
+    width: 100%;
+    min-height: 100dvh;
+    min-height: 100svh;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .one-cover {
+    min-height: clamp(140px, 24vh, 200px);
+    flex-shrink: 0;
+  }
+
+  .one-cover-text {
+    padding: 32px 16px 20px;
+  }
+
+  .one-cover-title {
+    font-size: clamp(36px, 11vw, 48px);
+  }
+
+  .one-stack {
+    flex: 0 0 auto;
+  }
+
+  .stack-block {
+    padding: 20px 16px 24px;
+  }
+
+  .stack-title {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  .stack-lead {
+    font-size: clamp(14px, 3.8vw, 18px);
+    margin-bottom: 14px;
+  }
+
+  .stack-desc {
+    font-size: clamp(10px, 2.8vw, 12px);
+  }
+
+  .pkg-subtitle {
+    font-size: clamp(13px, 3.8vw, 17px);
+  }
+
+  .pkg-list {
+    font-size: clamp(10px, 2.8vw, 12px);
+    line-height: 1.65;
+    max-width: none;
+    margin-bottom: 18px;
+  }
+
+  .pkg-price-value {
+    font-size: clamp(16px, 4.5vw, 22px);
+    padding: 10px 18px;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .stack-saving {
+    font-size: clamp(9px, 2.5vw, 11px);
+  }
+
+  .one-cta {
+    margin-top: auto;
+    flex-shrink: 0;
+  }
+
+  .cta-btn {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .one-foot {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .stack-block {
+    padding: 16px 12px 20px;
+  }
+
+  .pkg-list {
+    font-size: 9px;
+  }
+}
+
+@media print {
+  body.one-page-body {
+    background: #fff;
+  }
+
+  .deck-toolbar {
+    display: none;
+  }
+
+  .page.single-page {
+    box-shadow: none;
+    border: none;
+  }
+}
