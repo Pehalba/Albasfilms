@@ -243,6 +243,13 @@ body.one-page-body {
   border-bottom: none;
 }
 
+.sync-addon--spacer {
+  visibility: hidden;
+  pointer-events: none;
+  border-bottom-color: transparent;
+  background: var(--bg-light);
+}
+
 .sync-addon {
   grid-column: 2;
   display: flex;
