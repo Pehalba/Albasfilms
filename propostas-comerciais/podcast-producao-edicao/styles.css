@@ -309,6 +309,14 @@ a {
   border-radius: 10px;
 }
 
+.meta-note {
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.5;
+  padding: 4px 2px 12px;
+  font-style: italic;
+}
+
 /* CTA */
 .cta {
   margin-top: 8px;
