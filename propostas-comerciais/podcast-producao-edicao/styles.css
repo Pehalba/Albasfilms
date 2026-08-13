@@ -123,22 +123,6 @@ a {
   line-height: 1.1;
 }
 
-.hero-visual {
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--line);
-  aspect-ratio: 16 / 10;
-  background: #222;
-}
-
-.hero-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
-  filter: grayscale(1) brightness(1.06);
-}
-
 /* Plans */
 .plans {
   display: grid;
@@ -349,18 +333,6 @@ a {
 
   .deck {
     padding: 36px 32px 40px;
-  }
-
-  .hero-visual {
-    width: min(100%, 380px);
-    max-height: none;
-    aspect-ratio: 4 / 5;
-    margin-inline: auto;
-  }
-
-  .hero-visual img {
-    object-fit: cover;
-    object-position: center 22%;
   }
 
   .plans {
