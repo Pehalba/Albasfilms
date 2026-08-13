@@ -152,6 +152,7 @@ a {
   background: #fff;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .plan--full {
@@ -293,13 +294,20 @@ a {
   }
 
   .hero-visual {
-    aspect-ratio: 16 / 9;
-    max-height: 360px;
+    width: min(100%, 380px);
+    max-height: none;
+    aspect-ratio: 4 / 5;
+    margin-inline: auto;
+  }
+
+  .hero-visual img {
+    object-fit: cover;
+    object-position: center 22%;
   }
 
   .plans {
     grid-template-columns: 1fr 1fr;
-    align-items: start;
+    align-items: stretch;
   }
 
   .btn {
