@@ -38,7 +38,6 @@
           <div class="one-cover-text">
             <p class="one-cover-eyebrow">Albas Films</p>
             <h1 class="one-cover-title">Casamentos</h1>
-            <p class="one-cover-year">2026</p>
           </div>
         </header>
 
@@ -67,7 +66,6 @@
             <ul class="service-desc">
               <li>Stories na vertical</li>
               <li>Fotos pontuais com câmera</li>
-              <li>Até 48h</li>
             </ul>
             <span class="price-row">
               <span class="pick-check" aria-hidden="true"></span>
@@ -106,8 +104,7 @@
         </div>
 
         <p class="combo" id="comboHint">
-          Fechando junto · Storymaker + Teaser
-          <strong>R$ 2.990</strong>
+          <strong>15% off</strong> fechando os dois
         </p>
 
         <section class="addons is-locked" id="addonsBlock" aria-labelledby="addons-title">
@@ -198,11 +195,12 @@
                 <span class="addon-price">R$ 990</span>
               </button>
             </li>
+            <li class="addon-combo-row">
+              <p class="addon-combo" id="preweddingComboHint">
+                <strong>16% off</strong> · Pré-wedding vídeo + fotos
+              </p>
+            </li>
           </ul>
-          <p class="addon-combo" id="preweddingComboHint">
-            Pré-wedding vídeo + fotos · fechando junto
-            <strong>R$ 2.000</strong>
-          </p>
         </section>
 
         <div class="info-tip" id="infoTip" hidden>
@@ -216,7 +214,10 @@
         <div class="total-bar" id="totalBar">
           <div class="total-copy">
             <span class="total-label">Total</span>
-            <strong class="total-value" id="totalValue">R$ 0</strong>
+            <strong class="total-value">
+              <s class="total-was" id="totalWas" hidden></s>
+              <span id="totalValue">R$ 0</span>
+            </strong>
           </div>
           <a
             class="cta-btn"
@@ -237,6 +238,7 @@
         var services = Array.prototype.slice.call(document.querySelectorAll(".service"));
         var addons = Array.prototype.slice.call(document.querySelectorAll(".addon"));
         var totalEl = document.getElementById("totalValue");
+        var totalWasEl = document.getElementById("totalWas");
         var comboHint = document.getElementById("comboHint");
         var preweddingComboHint = document.getElementById("preweddingComboHint");
         var waBtn = document.getElementById("waBtn");
@@ -320,6 +322,14 @@
             return b.getAttribute("data-item") === "teaser";
           });
 
+          var listTotal = 0;
+          selServices.forEach(function (b) {
+            listTotal += Number(b.getAttribute("data-price"));
+          });
+          selAddons.forEach(function (b) {
+            listTotal += Number(b.getAttribute("data-price"));
+          });
+
           var total = 0;
           var lines = [];
 
@@ -361,6 +371,13 @@
           }
 
           totalEl.textContent = money(total);
+          if (listTotal > total) {
+            totalWasEl.hidden = false;
+            totalWasEl.textContent = money(listTotal);
+          } else {
+            totalWasEl.hidden = true;
+            totalWasEl.textContent = "";
+          }
 
           var baseWa = "https://wa.me/5541996162793?text=";
           if (!lines.length) {

@@ -169,7 +169,7 @@ button {
   align-items: center;
   width: 100%;
   transition: background 0.2s ease;
-  animation: service-pulse 1.8s ease-in-out infinite;
+  animation: service-pulse 2.4s ease-in-out infinite;
 }
 
 .service.is-selected {
@@ -191,7 +191,7 @@ button {
 }
 
 .service:not(.is-selected) .pick-check {
-  animation: check-pulse 1.8s ease-in-out infinite;
+  animation: check-pulse 2.4s ease-in-out infinite;
 }
 
 .service.is-selected .pick-check {
@@ -201,12 +201,12 @@ button {
 @keyframes service-pulse {
   0%,
   100% {
-    background: rgba(236, 234, 232, 0.15);
+    background: rgba(236, 234, 232, 0.08);
     box-shadow: inset 0 0 0 1px transparent;
   }
   50% {
-    background: rgba(236, 234, 232, 0.95);
-    box-shadow: inset 0 0 0 1.5px rgba(17, 17, 16, 0.22);
+    background: rgba(236, 234, 232, 0.45);
+    box-shadow: inset 0 0 0 1px rgba(17, 17, 16, 0.08);
   }
 }
 
@@ -215,12 +215,12 @@ button {
   100% {
     transform: scale(1);
     border-color: #b8b5b1;
-    box-shadow: 0 0 0 0 rgba(17, 17, 16, 0.2);
+    box-shadow: 0 0 0 0 rgba(17, 17, 16, 0);
   }
   50% {
-    transform: scale(1.18);
-    border-color: var(--black);
-    box-shadow: 0 0 0 4px rgba(17, 17, 16, 0.1);
+    transform: scale(1.06);
+    border-color: #8a8782;
+    box-shadow: 0 0 0 2px rgba(17, 17, 16, 0.05);
   }
 }
 
@@ -424,11 +424,11 @@ button {
 }
 
 .combo strong {
-  display: block;
-  margin-top: 4px;
+  display: inline;
+  margin-right: 6px;
   font-family: var(--serif);
-  font-size: 22px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 400;
   color: var(--black);
   letter-spacing: -0.02em;
 }
@@ -457,6 +457,14 @@ button {
 }
 
 .addon-list li:last-child {
+  border-bottom: none;
+}
+
+.addon-combo-row {
+  border-bottom: none;
+}
+
+.addon-list li:has(+ .addon-combo-row) {
   border-bottom: none;
 }
 
@@ -494,22 +502,22 @@ button {
 }
 
 .addon-combo {
-  text-align: center;
-  margin-top: 14px;
-  padding: 12px 12px 4px;
+  margin: 0;
+  padding: 4px 4px 14px 26px;
+  text-align: left;
   font-size: 12px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: var(--graphite);
 }
 
 .addon-combo strong {
   display: inline;
-  margin-left: 8px;
-  font-family: var(--serif);
-  font-size: 20px;
-  font-weight: 300;
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
   color: var(--black);
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
 }
 
 .addon-combo.is-active {
@@ -540,10 +548,21 @@ button {
 }
 
 .total-value {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
   font-family: var(--serif);
   font-size: clamp(34px, 8vw, 44px);
   font-weight: 300;
   letter-spacing: -0.02em;
+}
+
+.total-was {
+  font-size: 0.52em;
+  font-weight: 300;
+  color: var(--mid);
+  text-decoration: line-through;
+  letter-spacing: 0;
 }
 
 .cta-btn {
