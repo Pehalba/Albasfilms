@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex,nofollow,noarchive" />
-    <title>Catálogo Albas | Storymaker Casamentos 2026</title>
+    <title>Catálogo Albas | Casamentos 2026</title>
     <link rel="icon" href="../assets/favicon-af.png" type="image/png" sizes="any" />
     <link rel="apple-touch-icon" href="../assets/favicon-af.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,16 +20,16 @@
       <header class="deck-toolbar screen-only" aria-label="Catálogo">
         <a class="brand-mark" href="/" title="Albas Films">
           <img src="../assets/logo-albas-films.png" alt="Albas Films" width="120" height="44" />
-          <span class="brand-text">Catálogo · Albas</span>
+          <span class="brand-text">Catálogo · Casamentos</span>
         </a>
       </header>
 
-      <article class="page single-page" aria-label="Catálogo Storymaker Casamentos">
+      <article class="page single-page" aria-label="Catálogo Casamentos">
         <header class="one-cover">
           <div class="one-cover-photo">
             <img
               src="../images/casamento.webp"
-              alt="Storymaker para casamentos — Albas Films"
+              alt="Cobertura audiovisual de casamentos — Albas Films"
               width="1200"
               height="700"
               decoding="async"
@@ -37,93 +37,361 @@
           </div>
           <div class="one-cover-text">
             <p class="one-cover-eyebrow">Albas Films</p>
-            <h1 class="one-cover-title">Catálogo</h1>
+            <h1 class="one-cover-title">Casamentos</h1>
             <p class="one-cover-year">2026</p>
-            <p class="one-cover-brand">Storymaker · Casamentos</p>
           </div>
         </header>
 
-        <div class="one-split">
-          <h2 class="split-title split-title--main" id="pkg-inicial-title">Pacote inicial</h2>
-          <h2 class="split-title split-title--addons" id="pkg-opcionais-title">Opcionais</h2>
+        <p class="pick-hint">Selecione o que deseja e veja o total embaixo</p>
 
-          <div class="sync-main sync-main--features">
-            <ul class="pkg-list">
-              <li>2 Storymakers profissionais</li>
-              <li>Cobertura da cerimônia</li>
-              <li>Captação vertical — formato Stories</li>
-              <li>Registros do casal, convidados e emoções</li>
-              <li>Postados em até 48h</li>
+        <div class="services">
+          <button
+            type="button"
+            class="service"
+            data-item="story"
+            data-price="1490"
+            aria-pressed="false"
+            aria-label="Selecionar Storymaker"
+          >
+            <span class="service-head">
+              <h2 class="service-title">Storymaker</h2>
+              <span
+                class="info-btn"
+                role="button"
+                tabindex="0"
+                data-info="Cobertura do casamento em formato Stories: vídeos verticais e fotos pontuais com câmera, prontos para postar em até 48h."
+                aria-label="O que é Storymaker?"
+                >?</span
+              >
+            </span>
+            <ul class="service-desc">
+              <li>Stories na vertical</li>
+              <li>Fotos pontuais com câmera</li>
+              <li>Até 48h</li>
             </ul>
-          </div>
+            <span class="price-row">
+              <span class="pick-check" aria-hidden="true"></span>
+              <span class="service-price">R$ 1.490</span>
+            </span>
+          </button>
 
-          <div class="sync-addon sync-row-2">
-            <span class="addon-name">Making Of (noiva + noivo)</span>
-            <span class="addon-price">R$ 700</span>
-          </div>
-
-          <div class="sync-addon sync-row-3">
-            <span class="addon-name">Festa</span>
-            <span class="addon-price">R$ 400</span>
-          </div>
-
-          <div class="sync-main sync-main--videos-label sync-row-4">
-            <h3 class="pkg-subtitle">Vídeos entregues:</h3>
-          </div>
-
-          <div class="sync-addon sync-row-4">
-            <span class="addon-name">Drone</span>
-            <span class="addon-price">R$ 400</span>
-          </div>
-
-          <div class="sync-main sync-main--deliverables sync-row-5">
-            <ul class="pkg-list pkg-list--deliverables">
-              <li>Vídeos curtos para stories</li>
-              <li>Fotos postadas nos stories</li>
+          <button
+            type="button"
+            class="service"
+            data-item="teaser"
+            data-price="1999"
+            aria-pressed="false"
+            aria-label="Selecionar Teaser"
+          >
+            <span class="service-head">
+              <h2 class="service-title">Teaser</h2>
+              <span
+                class="info-btn"
+                role="button"
+                tabindex="0"
+                data-info="Filme curto cinematográfico de até 1 minuto e meio, em formato horizontal ou vertical — ideal para projetor, YouTube e redes."
+                aria-label="O que é Teaser?"
+                >?</span
+              >
+            </span>
+            <ul class="service-desc">
+              <li>Filme 1:30 minutos</li>
+              <li>Horizontal ou vertical</li>
             </ul>
-          </div>
+            <span class="price-row">
+              <span class="pick-check" aria-hidden="true"></span>
+              <span class="service-price">R$ 1.999</span>
+            </span>
+          </button>
+        </div>
 
-          <div class="sync-addon sync-row-5">
-            <span class="addon-name">Teaser cinematográfico (1:30) fechando junto</span>
-            <span class="addon-price-strike">R$ 2.490</span>
-            <span class="addon-price">R$ 1.999</span>
-          </div>
+        <p class="combo" id="comboHint">
+          Fechando junto · Storymaker + Teaser
+          <strong>R$ 2.990</strong>
+        </p>
 
-          <div class="sync-main sync-main--price sync-row-6">
-            <div class="pkg-price">
-              <span class="pkg-price-label">Pacote inicial:</span>
-              <span class="pkg-price-value">R$ 1.490</span>
-            </div>
-          </div>
+        <section class="addons is-locked" id="addonsBlock" aria-labelledby="addons-title">
+          <h2 class="addons-title" id="addons-title">Adicionais</h2>
+          <ul class="addon-list">
+            <li>
+              <button type="button" class="addon" data-item="making" data-price="700" aria-pressed="false" aria-label="Selecionar Making Of" aria-disabled="true">
+                <span class="pick-check" aria-hidden="true"></span>
+                <span class="addon-label">
+                  <span class="addon-name">Making Of</span>
+                  <span
+                    class="info-btn"
+                    role="button"
+                    tabindex="0"
+                    data-info="Bastidores da preparação da noiva e do noivo antes da cerimônia."
+                    aria-label="O que é Making Of?"
+                    >?</span
+                  >
+                </span>
+                <span class="addon-price">R$ 700</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="addon" data-item="festa" data-price="400" aria-pressed="false" aria-label="Selecionar Festa" aria-disabled="true">
+                <span class="pick-check" aria-hidden="true"></span>
+                <span class="addon-label">
+                  <span class="addon-name">Festa</span>
+                  <span
+                    class="info-btn"
+                    role="button"
+                    tabindex="0"
+                    data-info="Cobertura da festa após a cerimônia: pista, brinde e momentos com os convidados."
+                    aria-label="O que é Festa?"
+                    >?</span
+                  >
+                </span>
+                <span class="addon-price">R$ 400</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="addon" data-item="drone" data-price="400" aria-pressed="false" aria-label="Selecionar Drone" aria-disabled="true">
+                <span class="pick-check" aria-hidden="true"></span>
+                <span class="addon-label">
+                  <span class="addon-name">Drone</span>
+                  <span
+                    class="info-btn"
+                    role="button"
+                    tabindex="0"
+                    data-info="Imagens aéreas do local e do grande dia, sujeitas à viabilidade de voo."
+                    aria-label="O que é Drone?"
+                    >?</span
+                  >
+                </span>
+                <span class="addon-price">R$ 400</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="addon" data-item="prewedding-video" data-price="1399" data-independent="true" aria-pressed="false" aria-label="Selecionar Pré-wedding vídeo" aria-disabled="false">
+                <span class="pick-check" aria-hidden="true"></span>
+                <span class="addon-label">
+                  <span class="addon-name">Pré-wedding vídeo</span>
+                  <span
+                    class="info-btn"
+                    role="button"
+                    tabindex="0"
+                    data-info="Ensaio em vídeo do casal antes do casamento, em horário de luz especial."
+                    aria-label="O que é Pré-wedding vídeo?"
+                    >?</span
+                  >
+                </span>
+                <span class="addon-price">R$ 1.399</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="addon" data-item="prewedding-foto" data-price="990" data-independent="true" aria-pressed="false" aria-label="Selecionar Pré-wedding fotos" aria-disabled="false">
+                <span class="pick-check" aria-hidden="true"></span>
+                <span class="addon-label">
+                  <span class="addon-name">Pré-wedding fotos</span>
+                  <span
+                    class="info-btn"
+                    role="button"
+                    tabindex="0"
+                    data-info="Ensaio fotográfico do casal antes do casamento, em horário de luz especial."
+                    aria-label="O que é Pré-wedding fotos?"
+                    >?</span
+                  >
+                </span>
+                <span class="addon-price">R$ 990</span>
+              </button>
+            </li>
+          </ul>
+          <p class="addon-combo" id="preweddingComboHint">
+            Pré-wedding vídeo + fotos · fechando junto
+            <strong>R$ 2.000</strong>
+          </p>
+        </section>
 
-          <div class="sync-addon sync-row-6">
-            <span class="addon-name">Pré-wedding (fechando junto)</span>
-            <span class="addon-price-strike">R$ 1.799</span>
-            <span class="addon-price">R$ 1.399</span>
+        <div class="info-tip" id="infoTip" hidden>
+          <div class="info-tip-backdrop" id="infoTipBackdrop" aria-hidden="true"></div>
+          <div class="info-tip-panel" role="dialog" aria-modal="true" aria-labelledby="infoTipText">
+            <p id="infoTipText"></p>
+            <button type="button" class="info-tip-close" id="infoTipClose" aria-label="Fechar">×</button>
           </div>
         </div>
 
-        <p class="one-disclaimer">
-          Valores válidos para casamentos fechados em 2026 · Há cobrança de taxa de deslocamento e hospedagem para fora
-          de Curitiba · Drone sujeito à viabilidade de voo
-        </p>
-
-        <div class="one-cta">
-          <p class="one-cta-text">Dúvidas ou reserva de data? Fale com a gente no WhatsApp.</p>
+        <div class="total-bar" id="totalBar">
+          <div class="total-copy">
+            <span class="total-label">Total</span>
+            <strong class="total-value" id="totalValue">R$ 0</strong>
+          </div>
           <a
             class="cta-btn"
+            id="waBtn"
             href="https://wa.me/5541996162793?text=J%C3%A1%20analisei%20o%20cat%C3%A1logo"
             target="_blank"
             rel="noopener noreferrer"
             >Falar no WhatsApp</a
           >
         </div>
-
-        <footer class="one-foot">
-          <span>Albas Films</span>
-          <span>@albasfilms</span>
-        </footer>
       </article>
     </div>
+
+    <script>
+      (function () {
+        var COMBO = 2990;
+        var PREWEDDING_COMBO = 2000;
+        var services = Array.prototype.slice.call(document.querySelectorAll(".service"));
+        var addons = Array.prototype.slice.call(document.querySelectorAll(".addon"));
+        var totalEl = document.getElementById("totalValue");
+        var comboHint = document.getElementById("comboHint");
+        var preweddingComboHint = document.getElementById("preweddingComboHint");
+        var waBtn = document.getElementById("waBtn");
+        var addonsBlock = document.getElementById("addonsBlock");
+
+        function money(n) {
+          return "R$ " + n.toLocaleString("pt-BR");
+        }
+
+        function selected(btns) {
+          return btns.filter(function (b) {
+            return b.getAttribute("aria-pressed") === "true";
+          });
+        }
+
+        function setAddonsEnabled(enabled) {
+          addonsBlock.classList.toggle("is-locked", !enabled);
+          addons.forEach(function (b) {
+            var independent = b.getAttribute("data-independent") === "true";
+            if (independent) {
+              b.setAttribute("aria-disabled", "false");
+              return;
+            }
+            b.setAttribute("aria-disabled", enabled ? "false" : "true");
+            if (!enabled) {
+              b.setAttribute("aria-pressed", "false");
+              b.classList.remove("is-selected");
+            }
+          });
+        }
+
+        function toggle(btn) {
+          if (btn.getAttribute("aria-disabled") === "true") return;
+          var on = btn.getAttribute("aria-pressed") === "true";
+          btn.setAttribute("aria-pressed", on ? "false" : "true");
+          btn.classList.toggle("is-selected", !on);
+          update();
+        }
+
+        var infoTip = document.getElementById("infoTip");
+        var infoTipText = document.getElementById("infoTipText");
+        var infoTipClose = document.getElementById("infoTipClose");
+
+        function openInfo(text) {
+          infoTipText.textContent = text;
+          infoTip.hidden = false;
+        }
+
+        function closeInfo() {
+          infoTip.hidden = true;
+        }
+
+        document.querySelectorAll(".info-btn").forEach(function (btn) {
+          function show(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openInfo(btn.getAttribute("data-info") || "");
+          }
+          btn.addEventListener("click", show);
+          btn.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") show(e);
+          });
+        });
+
+        infoTipClose.addEventListener("click", closeInfo);
+        document.getElementById("infoTipBackdrop").addEventListener("click", closeInfo);
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeInfo();
+        });
+
+        function update() {
+          var selServices = selected(services);
+          var hasService = selServices.length > 0;
+          setAddonsEnabled(hasService);
+
+          var selAddons = selected(addons);
+          var story = selServices.some(function (b) {
+            return b.getAttribute("data-item") === "story";
+          });
+          var teaser = selServices.some(function (b) {
+            return b.getAttribute("data-item") === "teaser";
+          });
+
+          var total = 0;
+          var lines = [];
+
+          if (story && teaser) {
+            total += COMBO;
+            lines.push("Storymaker + Teaser (fechando junto)");
+            comboHint.classList.add("is-active");
+          } else {
+            comboHint.classList.remove("is-active");
+            selServices.forEach(function (b) {
+              total += Number(b.getAttribute("data-price"));
+              lines.push(b.querySelector(".service-title").textContent.trim());
+            });
+          }
+
+          var preVideo = selAddons.some(function (b) {
+            return b.getAttribute("data-item") === "prewedding-video";
+          });
+          var preFoto = selAddons.some(function (b) {
+            return b.getAttribute("data-item") === "prewedding-foto";
+          });
+
+          if (preVideo && preFoto) {
+            total += PREWEDDING_COMBO;
+            lines.push("Pré-wedding vídeo + fotos (fechando junto)");
+            preweddingComboHint.classList.add("is-active");
+            selAddons.forEach(function (b) {
+              var id = b.getAttribute("data-item");
+              if (id === "prewedding-video" || id === "prewedding-foto") return;
+              total += Number(b.getAttribute("data-price"));
+              lines.push(b.querySelector(".addon-name").textContent.trim());
+            });
+          } else {
+            preweddingComboHint.classList.remove("is-active");
+            selAddons.forEach(function (b) {
+              total += Number(b.getAttribute("data-price"));
+              lines.push(b.querySelector(".addon-name").textContent.trim());
+            });
+          }
+
+          totalEl.textContent = money(total);
+
+          var baseWa = "https://wa.me/5541996162793?text=";
+          if (!lines.length) {
+            waBtn.href = baseWa + "J%C3%A1%20analisei%20o%20cat%C3%A1logo";
+          } else {
+            waBtn.href =
+              baseWa +
+              encodeURIComponent(
+                "Olá! Analisei o catálogo e tenho interesse em:\n\n" +
+                  lines
+                    .map(function (l) {
+                      return "• " + l;
+                    })
+                    .join("\n")
+              );
+          }
+        }
+
+        services.forEach(function (b) {
+          b.addEventListener("click", function () {
+            toggle(b);
+          });
+        });
+        addons.forEach(function (b) {
+          b.addEventListener("click", function () {
+            toggle(b);
+          });
+        });
+
+        update();
+      })();
+    </script>
   </body>
 </html>
