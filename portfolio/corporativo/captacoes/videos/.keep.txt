@@ -1,0 +1,5 @@
+# Coloque aqui os MP4 (um por trabalho, de preferência 720p / comprimido).
+# No HTML do card (capa):
+#   data-video="videos/nome-do-arquivo.mp4"
+# O vídeo só baixa quando a pessoa clica. Sem data-video, o link externo (Instagram/Drive) continua valendo.
+# Em Captações, com data-video na lista o lightbox abre direto — sem precisar da página intermediária do cliente.
