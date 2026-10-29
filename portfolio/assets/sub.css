@@ -285,6 +285,12 @@ a{color:inherit}
   display:none;
 }
 .folder-card:hover .folder-cover{transform:scale(1.04)}
+.folder-card--soon:hover{
+  border-color:var(--light-line);
+  transform:none;
+  box-shadow:none;
+}
+.folder-card--soon:hover .folder-cover{transform:none}
 .folder-card-foot{
   display:flex;
   align-items:flex-start;
@@ -499,6 +505,40 @@ a.folder-arrow:focus-visible{
 .pf-cats a[aria-current="page"]{
   color:var(--black);
   border-bottom-color:var(--black);
+}
+
+/* Seletor de ordem dos blocos (ex.: Família / Corporativo) */
+.pf-order{
+  display:inline-flex;
+  gap:4px;
+  margin:0 0 28px;
+  padding:4px;
+  border:1px solid var(--light-line);
+  border-radius:999px;
+  background:var(--white);
+}
+.pf-order-btn{
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:400;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--mid);
+  background:transparent;
+  border:0;
+  border-radius:999px;
+  padding:8px 18px;
+  cursor:pointer;
+  transition:background 0.2s,color 0.2s;
+}
+.pf-order-btn:hover{color:var(--black)}
+.pf-order-btn[aria-pressed="true"]{
+  background:var(--black);
+  color:var(--white);
+}
+.pf-order-btn:focus-visible{
+  outline:2px solid var(--graphite);
+  outline-offset:2px;
 }
 
 /* Indicador de vídeo no card */

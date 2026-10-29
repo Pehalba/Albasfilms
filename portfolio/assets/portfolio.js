@@ -124,4 +124,26 @@
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") close();
   });
+
+  function showFirst(group) {
+    var wrap = document.querySelector(".pf-order-blocks");
+    var block = wrap && wrap.querySelector('[data-pf-group="' + group + '"]');
+    if (!block) return false;
+    wrap.insertBefore(block, wrap.firstElementChild);
+    document.querySelectorAll(".pf-order-btn").forEach(function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-pf-first") === group ? "true" : "false");
+    });
+    return true;
+  }
+
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".pf-order-btn");
+    if (!btn) return;
+    var group = btn.getAttribute("data-pf-first");
+    if (showFirst(group) && history.replaceState) {
+      history.replaceState(null, "", "#" + group);
+    }
+  });
+
+  if (location.hash) showFirst(location.hash.slice(1));
 })();
