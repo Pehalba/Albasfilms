@@ -285,6 +285,7 @@ a{color:inherit}
 .folder-badge--video::before{background-image:url("/portfolio/assets/icons/video.png")}
 .folder-badge--foto::before{background-image:url("/portfolio/assets/icons/foto.png")}
 .folder-badge--stories::before{background-image:url("/portfolio/assets/icons/stories.png?v=2")}
+.folder-badge--site::before{background-image:url("/portfolio/assets/icons/site.png")}
 .folder-cover::after{
   content:"";
   position:absolute;
